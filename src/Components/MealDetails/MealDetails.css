@@ -1,0 +1,142 @@
+
+
+.meal-details-main-area{
+    padding: 50px 0;
+}
+
+.back-btn{
+    border: none;
+    outline: none;
+    padding: 8px;
+    background-color: #22bf88;
+    color: #Fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.back-btn .icon{
+    margin-right: 4px;
+    font-size: 20px;
+}
+
+.meal-info-grid-layout{
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-details-info{
+    width: 50%;
+    margin-right: 20px;
+}
+.meal-details-info h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.meal-details-info p{
+    font-size: 15px;
+    color: gray;
+    line-height: 27px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.meal-img{
+    width: 50%;
+    margin-left: 20px;
+}
+.meal-img img{
+    width: 100%;
+}
+
+.flex-price{
+    display: flex;
+    align-items: center;
+
+}
+.flex-price h1{
+    margin-top: 15px;
+}
+.quantity-flex{
+    margin-left: 20px;
+    background-color: #Fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 150px;
+    border-radius: 30px;
+    justify-content: space-evenly;
+}
+
+.quantity-flex p{
+    margin: 0;
+    font-weight: bold;
+}
+.quantity-flex button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+.add-btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color:#22bf88;
+    padding: 10px;
+    color:#fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:20px 0;
+    cursor: pointer;
+}
+
+.add-btn .icon{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.img-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.img-flex img{
+    width: 30%;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width:992px){
+    .meal-info-grid-layout{
+        flex-direction: column;
+    }
+    .meal-details-info{
+        width: 100%;
+    }
+    .meal-img{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width:768px){
+
+}
+@media screen and (max-width:576px){
+    .meal-details-info h1{
+        font-size: 16px;
+    }
+    .flex-price{
+        flex-direction: column;
+    }
+}

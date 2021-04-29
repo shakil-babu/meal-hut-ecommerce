@@ -1,0 +1,76 @@
+
+.meals-main-area{
+    background-color: #eeeeee;
+    padding: 100px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.meals-title h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.line{
+    width: 35%;
+    height: 3px;
+    background-color: #22bf88;
+}
+.line1{
+    width: 25%;
+    height: 3px;
+    background-color: #22bf88;
+    margin-top: 10px;
+}
+
+.meals-bar{
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    
+}
+.meals-bar li{
+    list-style: none;
+    margin-left: 30px;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.meals-grid-layout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+
+.active{
+    color: #22bf88;
+    border-bottom: 2px solid #22bf88;
+}
+
+
+
+@media screen and (max-width:992px){
+    .meals-grid-layout{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:768px){
+    .meals-grid-layout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width:576px){
+    .meals-bar li{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .confirm-info-box {
+        flex-direction: column;
+    }
+    .confirm-info-box h4:first-child {
+        display: none;
+    }
+}

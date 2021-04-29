@@ -1,0 +1,143 @@
+
+
+.confirm-page-area{
+    padding: 50px 0;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.confrim-title{
+    margin: 0 5px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.confirm-document-object{
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 30px;
+    width: 80%;
+    margin: auto    ;
+}
+
+.confirm-document-object h5{
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.confirm-document-object h6{
+    font-size: 13px;
+    color: gray;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.confirm-document-object p{
+    font-size: 15px;
+    text-transform: uppercase;margin-bottom: 8px;
+}
+
+.confirm-info-box{
+    padding: 10px;
+    border: 2px solid #22bf88;
+}
+
+.info-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.info-flex h4{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.confirm-details-info-here{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    align-items: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.confirm-img-area{
+    width: 20%;
+}
+
+.confirm-img-area img{
+    width: 50%;
+}
+
+.confirm-title-price-quantity{
+    width: 30%;
+    text-align: left;
+}
+
+.order-info-title{
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.confrim-cart-total-info{
+    border: 2px solid #22bf88;
+    padding: 15px;
+}
+.confrim-cart-total-info hr{
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.confrim-cart-total-info h4{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.confrim-order-btn{
+    border:none;
+    outline: none; 
+    margin: 15px 0;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background:#22bf88;
+    cursor: pointer;
+}
+
+.confrim-order-btn:hover{
+    background:#22bf88a6;
+}
+
+.thank-you h4{
+    text-transform: uppercase;
+    margin: 8px 0;
+}
+.thank-you h6{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:992px){
+    .confirm-document-object{
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    .meals-grid-layout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width:576px){
+    .confirm-details-info-here{
+        flex-direction: column;
+    }
+    .confirm-img-area{
+        display: none;
+    }
+    .confrim-cart-total-info p{
+        font-size: 10px;
+    }
+    .confrim-cart-total-info h4, .confrim-cart-total-info h5{
+        font-size: 11px;
+    }
+}

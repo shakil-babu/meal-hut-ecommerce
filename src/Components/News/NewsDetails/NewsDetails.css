@@ -1,0 +1,128 @@
+
+
+.news-details-main-area{
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 0;
+}
+
+.news-location{
+    text-align: center;
+    padding: 30px;
+    background: #22bf88;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+.news-details-main-area h3{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.news-info-and-others-info-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-inforamtion-area{
+    width: 70%;
+    border-right: 2px solid gray;
+    padding-right: 10px;
+}
+.news-inforamtion-area p{
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+    margin-top: 50px;
+}
+.news-img-main-box{
+    width: 100%;
+}
+.news-img-main-box img{
+    width: 100%;
+    height: 250px;
+}
+.news-img-main-box p{
+    text-align: right;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:gray
+}
+
+.other-news-area{
+    width: 30%;
+    margin-left: 20px;
+}
+
+.other-news-main-info-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #22bf88;
+    padding: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.other-news-main-info-area img{
+    width: 50px;
+}
+.other-news-main-info-area p{
+    font-size: 12px;
+}
+
+.take-food{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.take-line{
+    width: 35%;
+    height: 3px;
+    background: #22bf88;
+}
+
+.take-food h4{
+    text-transform: uppercase;
+}
+
+.other-line{
+    margin: 15px 0;
+    width: 15%;
+    height: 3px;
+    background-color: #22bf88;
+}
+.other-news-area h3{
+    text-transform: uppercase;
+}
+@media screen and (max-width:992px){
+    .news-info-and-others-info-flex{
+        flex-direction: column;
+    }
+    .news-inforamtion-area{
+        width: 100%;
+        border-right: none;
+    }
+    .news-img-main-box{
+        width: 100%;
+    }
+    .other-news-area{
+        width: 100%;
+    }
+    .other-news-main-info-area{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:768px){
+    .other-news-area h3{
+        margin-top: 40px;
+    }
+}
