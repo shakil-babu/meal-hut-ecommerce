@@ -41,6 +41,33 @@ The application is composed of the following Features:
 ![home](https://i.ibb.co/yQ7tgYQ/home.png)
 
 
+### Meals page
+![meal](https://i.ibb.co/vzLBHyw/meal.png)
+
+
+### Login page
+![login](https://i.ibb.co/gmMfcwr/login.png)
+
+
+### Cart page
+![cart](https://i.ibb.co/CwMqxb6/cart.png)
+
+
+### details page
+![details](https://i.ibb.co/vH4KJWV/de.png)
+
+
+### delivery details page
+![delivery-details](https://i.ibb.co/5YkCjVf/di.png)
+
+
+### check out page
+![check out](https://i.ibb.co/0MR1MJx/last.png)
+
+
+
+
+
 
 ``` For more information visit live link ``` 
 ``` Thank you dear , for spent your valueable time here ```
