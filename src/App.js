@@ -11,12 +11,12 @@ import Cart from './Pages/Cart/Cart';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login.jsx';
 import SignUp from './Pages/Signup/SignUp';
-
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 export const ProductInfoContext = createContext();
 export const userContext = createContext();
 
 function App() {
-  const [productInfo , setProductInfo] = useState([]);
+  const [productInfo , setProductInfo] = useState(  []);
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
       <ProductInfoContext.Provider  value={[productInfo, setProductInfo]} >
@@ -30,9 +30,13 @@ function App() {
               <Route path='/meals' component={AllMeals}/>
               <Route path='/signup' component={SignUp}/>
               <Route path='/login' component={Login}/>
-              <Route path='/cart/delivery-details' component={DeliveryDetails}/>
+              <PrivateRoute path='/cart/delivery-details'>
+                <DeliveryDetails/>
+              </PrivateRoute>
               <Route path='/cart' component={Cart}/>
-              <Route path='/news/:NewsId' component={NewsDetails}/>
+              <PrivateRoute path='/news/:NewsId'>
+                <NewsDetails/>
+              </PrivateRoute>
 
           </Switch>
           <Footer/>

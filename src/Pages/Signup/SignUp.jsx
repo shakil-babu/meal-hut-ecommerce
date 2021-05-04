@@ -75,10 +75,10 @@ let { from } = location.state || { from: { pathname: "/" } };
                 <div className="container">
                    <div className="form-area-signup">
                         <img src={logo} alt=""/>
-                        <form >
-                            <input type="text" placeholder='Name' /> <br/>
-                            <input type="email" placeholder='Email' /> <br/>
-                            <input type="password" placeholder='Password' /> <br/>
+                        <form onSubmit={submitHandler}>
+                            <input onChange={blurHandler} name='name' type="text" placeholder='Name' /> <br/>
+                            <input onChange={blurHandler} name='email' type="email" placeholder='Email' /> <br/>
+                            <input onChange={blurHandler} name='password' type="password" placeholder='Password' /> <br/>
                             <div className="flex">
                                 <p>Already have an account?</p>
                                 <p><Link style={{textDecoration:'none', color:'#22bf88'}} to ='/login'>Login</Link></p>
@@ -91,7 +91,7 @@ let { from } = location.state || { from: { pathname: "/" } };
                             <div className="plainline"></div>
                         </div>
 
-                        <button className='google-btn'><FcGoogle className='icon'/>Sign in with google</button>
+                        <button onClick={googleSignIn} className='google-btn'><FcGoogle className='icon'/>Sign in with google</button>
                    </div>
                 </div>
             </section>   

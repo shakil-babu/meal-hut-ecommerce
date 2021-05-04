@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './ConfirmPage.css';
 import {FaCheck} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-const ConfirmPage = ({packet, productInfo, details}) => {
+const ConfirmPage = ({packet, productInfo, details, loggedInUser}) => {
     let totalPrice = productInfo.reduce((total, cur) => total + cur.product.price * cur.quantity , 0);
     let shipping = totalPrice > 100 ? 15 : totalPrice > 500 ? 10 : 20 ; 
     const tax = 5 ;
@@ -29,7 +29,8 @@ const ConfirmPage = ({packet, productInfo, details}) => {
                             <h6>Arriving in 30-40 minute</h6>
                             <p>Your Information:</p>
                             <div className="confirm-info-box">
-                                <div className="info-flex"><h4>Name: </h4> <h4>{details.name}</h4></div>
+                                <div className="info-flex"><h4>Name: </h4> <h4>{loggedInUser.name}</h4></div>
+                                <div className="info-flex"><h4>Email: </h4> <h4>{loggedInUser.email}</h4></div>
                                 <div className="info-flex"><h4>Phone No: </h4> <h4>{details.phone}</h4></div>
                                 <div className="info-flex"><h4>Road No: </h4> <h4>{details.road}</h4></div>
                                 <div className="info-flex"> <h4>House No: </h4> <h4>{details.house}</h4></div>

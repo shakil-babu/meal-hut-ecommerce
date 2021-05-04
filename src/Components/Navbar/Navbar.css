@@ -11,7 +11,16 @@
     width: 80%;
     margin: auto;
 }
-
+.logout{
+    border: none;
+    padding: 10px !important;
+    outline: none;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #22bf88;
+    color: #fff !important;
+    cursor: pointer;
+}
 .nav-flex{
     display: flex;
     justify-content: space-between;

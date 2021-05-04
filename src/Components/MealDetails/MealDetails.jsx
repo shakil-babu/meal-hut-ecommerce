@@ -59,6 +59,9 @@ const MealDetails = () => {
                                    
                                 </div>
                             </div> 
+                            {
+                                success && <Link to='/cart' style={{textDecoration:"none"}}> <button className='add-btn'>Go to cart</button> </Link>
+                            }
                            {
                                success ? (
                                 <button style={{backgroundColor:'gray'}}  className='add-btn'> <FaCheck className='icon' /> Added</button>

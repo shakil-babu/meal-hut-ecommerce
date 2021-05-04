@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { ProductInfoContext } from '../../App';
+import { ProductInfoContext, userContext } from '../../App';
 import './Cart.css';
 const Cart = () => {
     const [productInfo, setProductInfo] = useContext(ProductInfoContext);
@@ -15,6 +15,12 @@ const Cart = () => {
         const filterData = productInfo.filter(item => item.product.id !== id);
         setProductInfo(filterData)
     }
+
+    // from context
+    const [loggedInUser, setLoggedInUser] = useContext(userContext);
+
+
+    
     return (
         <>
             <section className="cart-main-area">
@@ -51,7 +57,6 @@ const Cart = () => {
                         <p>Tax + VAT : ${tax} </p>
                         <hr/>
                         <h4>Order Total: ${grandTotal} </h4>
-
                         <Link style={{textDecoration:'none', color:'#fff'}} to='/cart/delivery-details'><button className="place-order">Place Order</button></Link>
                         </div>
                     </div>

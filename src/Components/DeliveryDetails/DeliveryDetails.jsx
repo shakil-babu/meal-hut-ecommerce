@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './DeliveryDetails.css';
 import logo from '../../images/logo.png';
-import { ProductInfoContext } from '../../App';
+import { ProductInfoContext, userContext } from '../../App';
 import ConfirmPage from '../ConfirmPage/ConfirmPage';
 const DeliveryDetails = () => {
 
@@ -10,7 +10,7 @@ const DeliveryDetails = () => {
     const [details, setDetails] = useState({
         name:'',
         phone:'',
-        road:'', house:'' , agree:false, packet:false
+        road:'', house:'' , agree:false, packet:false, email:''
     })
     const blurHandler = (e) => {
         setDetails({
@@ -32,7 +32,7 @@ const DeliveryDetails = () => {
             packet: !details.packet,
     })
     }
-    const {name,phone,road,house,agree, packet} = details ;
+    const {name,phone,road,house,agree, packet, email} = details ;
 
 
     // from context api
@@ -45,11 +45,14 @@ const DeliveryDetails = () => {
 
     }
 
+    // userinfo from context
+    const [loggedInUser, setLoggedInUser] = useContext(userContext);
+
     return (
         <>
            {
                isCompleted ? (
-                <ConfirmPage  packet={packet} productInfo = {productInfo} details ={details} />
+                <ConfirmPage loggedInUser={loggedInUser}  packet={packet} productInfo = {productInfo} details ={details} />
                ):(
 
                 <section className="delivery-details">
@@ -66,13 +69,14 @@ const DeliveryDetails = () => {
                         <div className="form-area-signup">
                         <img src={logo} alt=""/>
                         <form onSubmit={submitHandler} >
-                            <input onBlur={blurHandler} type="text" placeholder='Name' name='name' required /> <br/>
+                            <input onBlur={blurHandler} value={loggedInUser.name} type="text" placeholder='Name' name='name' required /> <br/>
+                            <input onBlur={blurHandler} value={loggedInUser.email} type="email" placeholder='Name' name='email' required /> <br/>
                             <input onBlur={blurHandler} type="number" placeholder='Phone No:' name='phone' /> <br/>
                             <input onBlur={blurHandler} type="text" placeholder='Road No:' name='road' /> <br/>
                             <input onBlur={blurHandler} type="text" placeholder='House / Flat / Floor' name='house' /> <br/>
                             <div className="price-flex"><div className="d-flex"><input onChange={packetHandler} type="checkbox" /> <p>Need a Special Packet ?</p></div> +$5</div>
                             <div className="d-flex"><input onChange={changeHandler} type="checkbox" name='agree' /> <p>Are you agree the all terms and conditions ?</p></div>
-                            <button disabled={!agree}  className={name && phone && road && house && agree ? 'submit-btn green':'submit-btn gray'} type='submit' >Complete</button>
+                            <button disabled={!agree}  className={phone && road && house && agree? 'submit-btn green':'submit-btn gray'} type='submit' >Complete</button>
                         </form>
                    </div>
                     </div>
